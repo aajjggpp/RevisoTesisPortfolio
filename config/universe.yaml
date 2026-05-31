@@ -1,0 +1,51 @@
+universe:
+  - {name: "Adobe",                    src_symbol: "ADBE.O",    us_filer: true}
+  - {name: "SK Hynix",                 src_symbol: "HY9Hy.F",   us_filer: false}
+  - {name: "Minera Alamos",            src_symbol: "MAI.V",     us_filer: false}
+  - {name: "Pan American Silver",      src_symbol: "PAAS.TO",   us_filer: true}   # 40-F en SEC
+  - {name: "Wheaton Precious Metals",  src_symbol: "WPM",       us_filer: true}   # 40-F en SEC
+  - {name: "Mitie",                    src_symbol: "MTO.L",     us_filer: false}
+  - {name: "VersaBank",                src_symbol: "VBNK.O",    us_filer: true}
+  - {name: "Andean Precious Metals",   src_symbol: "APM.TO",    us_filer: false}
+  - {name: "Carlisle",                 src_symbol: "CSL",       us_filer: true}
+  - {name: "Alphabet C",               src_symbol: "GOOG.O",    us_filer: true}
+  - {name: "Nagarro SE",               src_symbol: "NA9n.DE",   us_filer: false}
+  - {name: "Valeura Energy",           src_symbol: "VLE.TO",    us_filer: false}
+  - {name: "West African Resources",   src_symbol: "WAF.AX",    us_filer: false}
+  - {name: "Titan America",            src_symbol: "TTAM.K",    us_filer: true}
+  - {name: "Santander",                src_symbol: "SAN",       us_filer: true}   # 20-F en SEC
+  - {name: "Brookfield",               src_symbol: "BN",        us_filer: true}
+  - {name: "goeasy",                   src_symbol: "GSY.TO",    us_filer: false}
+  - {name: "Saturn Oil",               src_symbol: "SOIL.TO",   us_filer: false}
+  - {name: "NVIDIA",                   src_symbol: "NVDA.O",    us_filer: true}
+  - {name: "Titan Cement",             src_symbol: "TITC.BR",   us_filer: false}
+  - {name: "Watches of Switzerland",   src_symbol: "WOSG.L",    us_filer: false}
+  - {name: "Bloober",                  src_symbol: "BLOP.WA",   us_filer: false}
+  - {name: "Mid-America Apartment",    src_symbol: "MAA",       us_filer: true}
+  - {name: "Optima Health",            src_symbol: "OPT.L",     us_filer: false}
+  - {name: "Teleperformance",          src_symbol: "TEPRF.PA",  us_filer: false}
+  - {name: "Alexandria RE",            src_symbol: "ARE",       us_filer: true}
+  - {name: "Verallia",                 src_symbol: "VRLA.PA",   us_filer: false}
+  - {name: "Mader Group",              src_symbol: "MAD.AX",    us_filer: false}
+  - {name: "Big Yellow",               src_symbol: "BYG.L",     us_filer: false}
+  - {name: "Evolution AB",             src_symbol: "EVOG.ST",   us_filer: false}
+  - {name: "Georgia Capital",          src_symbol: "CGEO.L",    us_filer: false}
+  - {name: "Linea Directa",            src_symbol: "LDA.MC",    us_filer: false}
+  - {name: "Newprinces",               src_symbol: "NWLF.MI",   us_filer: false}
+  - {name: "Clarus",                   src_symbol: "CLAR.O",    us_filer: true}
+  - {name: "Eurofins Scientific",      src_symbol: "EUFI.PA",   us_filer: false}
+  - {name: "Concentrix",               src_symbol: "CNXC.O",    us_filer: true}
+  - {name: "Brookfield Asset Mgmt",    src_symbol: "BAM",       us_filer: true}
+  - {name: "Kelly Partners",           src_symbol: "KPG.AX",    us_filer: false}
+  - {name: "Endava",                   src_symbol: "DAVA.K",    us_filer: true}   # 20-F en SEC
+  - {name: "Colliers International",   src_symbol: "CIGI.O",    us_filer: true}
+  - {name: "Copart",                   src_symbol: "CPRT.O",    us_filer: true}
+  - {name: "Mo-Bruk SA",               src_symbol: "MBR.WA",    us_filer: false}
+  - {name: "Pool",                     src_symbol: "POOL.O",    us_filer: true}
+  - {name: "SDI Group",                src_symbol: "SDIS.L",    us_filer: false}
+  - {name: "TransUnion",               src_symbol: "TRU",       us_filer: true}
+  - {name: "Microsoft",                src_symbol: "MSFT.O",    us_filer: true}
+  - {name: "Meta Platforms",           src_symbol: "META.O",    us_filer: true}
+  - {name: "Macfarlane Group",         src_symbol: "MACF.L",    us_filer: false}
+  - {name: "Storskogen AB",            src_symbol: "STORb.ST",  us_filer: false}
+  - {name: "Auto Partner",             src_symbol: "APR.WA",    us_filer: false}

@@ -1,0 +1,12 @@
+cadence_days: 2                # frecuencia del cron (informativo; el cron real va en el workflow)
+output_language: "es"          # idioma del análisis
+pin: null                      # si se pone un TICKER (src_symbol), fuerza analizar ese; si null, manda el score
+cooldown_days: 14              # no repetir una acción analizada hace menos de esto
+scoring_weights:
+  results: 0.4                 # w_res
+  news: 0.3                    # w_news
+  staleness: 0.3               # w_stale
+results_decay_days: 40         # ventana de decaimiento de la señal "resultados recientes"
+news_lookback_days: 14         # ventana para contar noticias
+news_locale: "en-US"           # locale de Google News (ej: "es-ES", "de-DE", "en-US")
+prompt_path: "prompts/prompt_analisis.md"

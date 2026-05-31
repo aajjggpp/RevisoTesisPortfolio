@@ -1,0 +1,58 @@
+name: Analysis Pipeline
+
+on:
+  schedule:
+    # Every 2 days at 08:00 UTC. Adjust cron expression to change cadence.
+    - cron: "0 8 */2 * *"
+  # Allow manual triggering from the GitHub Actions UI.
+  workflow_dispatch:
+
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write   # Required to commit the output file and history back to the repo.
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          # Use a PAT with write access if the default GITHUB_TOKEN is restricted
+          # in your org. For most repos the default token is sufficient.
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: pip install --upgrade pip && pip install -r requirements.txt
+
+      - name: Run analysis pipeline
+        env:
+          # Set this secret in Settings → Secrets and variables → Actions.
+          # If not set, the pipeline runs in STUB mode (safe for testing).
+          LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
+          # Optional: override the LLM endpoint (defaults to OpenAI).
+          LLM_BASE_URL: ${{ secrets.LLM_BASE_URL }}
+          # Optional: override the model name (defaults to gpt-4o).
+          LLM_MODEL: ${{ secrets.LLM_MODEL }}
+          # Required: real contact email for SEC fair-access policy.
+          # Set in Settings → Secrets and variables → Actions.
+          EDGAR_USER_AGENT: ${{ secrets.EDGAR_USER_AGENT }}
+        run: python -m src.pipeline
+
+      - name: Commit output and updated history
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add output/ state/history.json
+          # Only commit if there are staged changes (idempotent).
+          if ! git diff --staged --quiet; then
+            git pull --rebase origin ${{ github.ref_name }}
+            git commit -m "chore: auto-analysis $(date -u +%Y-%m-%d)"
+            git push
+          fi
